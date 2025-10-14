@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@keyframes move{
+20%{
+    opacity:0;
+}
+40%{
+    opacity:1;
+}
+60%{
+    opacity:0;
+}
+80%{
+    opacity:1;
+}
+100%{
+    transform: translate(66vw);
+    opacity:0;
+}
+
+}
+@keyframes move2{
+20%{
+    opacity:1;
+}
+40%{
+    opacity:0;
+}
+60%{
+    opacity:1;
+}
+80%{
+    opacity:0;
+}
+95%{
+    opacity:1;
+}
+99%{
+    opacity:1;
+}
+100%{
+    transform: translate(40vw);
+    opacity:0;
+}
+}
+@keyframes spin {
+    20%{
+        opacity:1
+    }
+    50%{
+        transform:rotateY(0deg);
+        opacity:1
+    }
+    100%{
+        transform:rotateY(1080deg);
+        opacity:0;
+
+    }
+}
+@keyframes cacooning {
+
+    50%{
+        opacity:0;
+        transform:rotateY(0deg);
+    }
+    100%{
+        transform:rotateY(1080deg) scale(5);
+        opacity:1;
+    }
+}
+
+
+    #caterpillar{
+        position: absolute;        
+        background-image: url("caterpillar.png");
+        background-size: cover;
+        width: 500px;
+        height: 200px;
+        scale:0.6;
+        top: 35vh;
+        left: -6.5vw;
+        animation-name: move;
+        animation-duration: 4s;
+        animation-timing-function:linear;
+        animation-fill-mode: forwards;
+    }
+
+
+    #caterpillar2{
+        position: absolute;    
+        background-image: url("caterpillar2.png");
+        background-size: cover;
+        width: 300px;
+        height: 200px;
+        top: 30vh;
+        float:left;
+        opacity: 0;        
+        animation-name: move2;        
+        animation-duration: 4s;        
+        animation-timing-function:linear;
+        animation-fill-mode: forwards;
+    }
+    #caterpillar2spin{
+        position: absolute;    
+        background-image: url("caterpillar2.png");
+        background-size: cover;
+        width: 300px;
+        height: 200px;
+        top: 30vh;
+        left:40vw;
+        opacity: 0;        
+        animation-name: spin;        
+        animation-duration: 6s;        
+        animation-timing-function:linear;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+
+
+    }
+    #cacoon{
+        position: absolute;
+        background-image: url("cacoon.png");
+        width:600px;
+        height:300px;
+        scale:0.2;
+        top:20vh;
+        left: 50vh;
+        opacity:0;
+        animation-name: cacooning;
+        animation-duration: 6s;
+        animation-timing-function: linear;
+        animation-delay: 4s;
+        animation-fill-mode: forwards;
+
+
+
+
+    }
+
+    </style>
+</head>
+<body>
+    <div id="caterpillar"></div>
+    <div id="caterpillar2"></div>
+    <div id ="caterpillar2spin"></div>
+    <div id="cacoon"></div>
+</body>
+</html>

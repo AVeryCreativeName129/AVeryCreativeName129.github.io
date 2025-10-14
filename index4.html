@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+@keyframes move{
+
+10%{
+    opacity:0;
+}
+20%{
+    opacity:1;
+}
+30%{
+    opacity:0;
+}
+40%{
+    opacity:1;
+}
+50%{
+    opacity:0;
+}
+60%{
+    opacity:1;
+}
+70%{
+    opacity:0;
+}
+80%{
+    opacity:1;
+}
+90%{
+    opacity:0;
+}
+100%{
+    transform: translate(170vw);
+    opacity:1;
+}
+}
+@keyframes move2{
+10%{
+    opacity:1;
+}
+20%{
+    opacity:0;
+}
+30%{
+    opacity:1;
+}
+40%{
+    opacity:0;
+}
+50%{
+    opacity:1;
+}
+60%{
+    opacity:0;
+}
+70%{
+    opacity:1;
+}
+80%{
+    opacity:0;
+}
+90%{
+    opacity:1;
+}
+100%{
+    transform: translate(100vw);
+    opacity:0;
+}
+}
+@keyframes fade-in{
+80%{
+    opacity:0;
+    }
+100%{
+    opacity: 100;
+    }
+}
+#caterpillar{
+        animation-name: move;
+        animation-duration: 10s;
+        animation-timing-function:linear;
+        position: absolute;
+        background-image: url("caterpillar.png");
+        background-size: cover;
+        width: 500px;
+        height: 200px;
+        scale: 0.6;
+        top: 15vh;
+        left: -9vw;
+        animation-fill-mode: forwards;
+        z-index: 5;
+    }
+    #caterpillar2{
+        animation-name: move2;
+        animation-duration: 10s;
+        animation-timing-function:linear;
+        position: absolute;
+        background-image: url("caterpillar2.png");
+        background-size: cover;
+        width: 300px;
+        height: 200px;
+        top: 10vh;
+        float:left;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        z-index: 5;
+    }
+    #plums{
+        background-image: url("plum.png");
+        height:35vh;
+        width:70vw;
+    }
+    
+    #next{
+        animation-name: fade-in;
+        opacity: 0;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 80vh;
+        left: 78vw;
+        background-image: url("next.png");
+        background-color: transparent;
+        border: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor:pointer;
+    }
+
+</style>
+</head>
+<body>
+    <div id="caterpillar"></div>
+    <div id="caterpillar2"></div>
+    <div id="plums"></div>
+    <button id="next" onclick="location.href='index5.html'"></button> 
+</body>
+</html>

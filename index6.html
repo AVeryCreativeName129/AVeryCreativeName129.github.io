@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes disappear{
+            100%{
+                opacity:0;
+            }
+        }
+        @keyframes biggify{
+            90%{
+                opacity:1;
+            }
+            100%{
+                scale:1.5;
+                opacity:0;
+
+            }
+        }
+        @keyframes reappear{
+            100%{
+                opacity:1
+            }
+        }
+        
+        #caterpillar{
+            position: absolute;
+            background-image:url("caterpillar2.png");
+            width: 600px;
+            height: 400px;
+            scale:0.5;
+            top: 20vh;
+            left: 30vw;
+
+            animation-name: disappear;
+            animation-duration:1s;
+            animation-delay:1s;
+            animation-fill-mode: forwards;
+        }
+        #caterpillar2{
+            position: absolute;
+            background-image:url("caterpillar.png");
+            width: 550px;
+            height: 250px;
+            scale: 0.6;
+            top: 30vh;
+            left: 30vw;
+
+            opacity:0;
+            animation-name: biggify;
+            animation-duration:3s;
+            animation-delay:2s;
+            animation-fill-mode: forwards;
+
+        }
+
+        #fat{
+            position: absolute;
+            background-image:url("fat-caterpillar.png");
+            width: 30vw;
+            height:60vh;
+            scale: 2;
+            background-repeat: no-repeat;
+            top:55vh;
+            left: 45vw;
+
+            opacity:0;
+            animation-name:reappear;
+            animation-duration:1s;
+            animation-delay:5s;
+            animation-fill-mode: forwards;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="caterpillar"></div>
+    <div id="caterpillar2"></div>
+    <div id="fat"></div>
+</body>
+</html>
