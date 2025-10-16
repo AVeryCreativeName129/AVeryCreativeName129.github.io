@@ -4,150 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <style>
-@keyframes move{
-20%{
-    opacity:0;
-}
-40%{
-    opacity:1;
-}
-60%{
-    opacity:0;
-}
-80%{
-    opacity:1;
-}
-100%{
-    transform: translate(66vw);
-    opacity:0;
-}
-
-}
-@keyframes move2{
-20%{
-    opacity:1;
-}
-40%{
-    opacity:0;
-}
-60%{
-    opacity:1;
-}
-80%{
-    opacity:0;
-}
-95%{
-    opacity:1;
-}
-99%{
-    opacity:1;
-}
-100%{
-    transform: translate(40vw);
-    opacity:0;
-}
-}
-@keyframes spin {
-    20%{
-        opacity:1
+    @keyframes slide{
+        100%{
+            transform:translate(100vw)
+        }
     }
-    50%{
-        transform:rotateY(0deg);
-        opacity:1
-    }
-    100%{
-        transform:rotateY(1080deg);
-        opacity:0;
-
-    }
-}
-@keyframes cacooning {
-
-    50%{
-        opacity:0;
-        transform:rotateY(0deg);
-    }
-    100%{
-        transform:rotateY(1080deg) scale(5);
-        opacity:1;
-    }
-}
-
-
-    #caterpillar{
-        position: absolute;        
-        background-image: url("caterpillar.png");
-        background-size: cover;
-        width: 500px;
-        height: 200px;
-        scale:0.6;
-        top: 35vh;
-        left: -6.5vw;
-        animation-name: move;
-        animation-duration: 4s;
-        animation-timing-function:linear;
-        animation-fill-mode: forwards;
-    }
-
-
-    #caterpillar2{
-        position: absolute;    
-        background-image: url("caterpillar2.png");
-        background-size: cover;
-        width: 300px;
-        height: 200px;
-        top: 30vh;
-        float:left;
-        opacity: 0;        
-        animation-name: move2;        
-        animation-duration: 4s;        
-        animation-timing-function:linear;
-        animation-fill-mode: forwards;
-    }
-    #caterpillar2spin{
-        position: absolute;    
-        background-image: url("caterpillar2.png");
-        background-size: cover;
-        width: 300px;
-        height: 200px;
-        top: 30vh;
-        left:40vw;
-        opacity: 0;        
-        animation-name: spin;        
-        animation-duration: 6s;        
-        animation-timing-function:linear;
-        animation-delay: 4s;
-        animation-fill-mode: forwards;
-
-
-    }
-    #cacoon{
+    #caterpillarup{
         position: absolute;
-        background-image: url("cacoon.png");
+        background-image: url("caterpillar2.png");
+        background-size: cover;
+        width: 300px;
+        height: 200px;
+        top: 40vh;
+        left:70vw;
+    }    
+
+    #leaf{
+        position:absolute;
+        background-image:url("leaf.png");
+        background-size:cover;
         width:600px;
-        height:300px;
-        scale:0.2;
+        height:400px;
+        left:25vw;
         top:20vh;
-        left: 50vh;
-        opacity:0;
-        animation-name: cacooning;
-        animation-duration: 6s;
-        animation-timing-function: linear;
-        animation-delay: 4s;
-        animation-fill-mode: forwards;
-
-
 
 
     }
+    #shape{
+        float:right;
+        clip-path: polygon(63% 14%, 100% 0, 100% 100%, 0 100%, 19% 44%);
+        shape-outside: polygon(63% 14%, 100% 0, 100% 100%, 0 100%, 19% 44%);
+        width:250px;
+        height:250px;
+        margin-top:30vh;
+        margin-left:55vw;
+    }
+    #text{
+        font-size: 32px;
+        height:200px;
+        width:400px;
+        margin-top:50vh;
+    }
+    #text1{
+        height:50%;
+        width:50%;
+        font-size:70px;
 
-    </style>
+
+    }
+    #text2{
+        position:absolute;
+        left:72vw;
+        top:30vh;
+    }
+    #hole1{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:50px;
+        width:50px;
+        left:30vw;
+        top:45vh;
+        background-color:white;
+    }
+    #hole2{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:50px;
+        width:50px;
+        left:37vw;
+        top:45vh;
+        background-color:white;
+    }
+    #hole3{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:50px;
+        width:50px;
+        left:44vw;
+        top:45vh;
+        background-color:white;
+    }
+    #hole4{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:50px;
+        width:50px;
+        left:51vw;
+        top:45vh;
+        background-color:white;
+    }
+    #hole5{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:50px;
+        width:50px;
+        left:58vw;
+        top:45vh;
+        background-color:white;
+    }
+    #movingbox1{
+        position:absolute;
+        z-index:5;
+        width:100vw;
+        height:100vh;
+        top:0;
+        background-color:white;
+        animation-name:slide;
+        animation-duration:7s;
+        animation-fill-mode: forwards;
+    }
+
+</style>
 </head>
 <body>
-    <div id="caterpillar"></div>
-    <div id="caterpillar2"></div>
-    <div id ="caterpillar2spin"></div>
-    <div id="cacoon"></div>
+    <div id="caterpillarup"></div>
+
+    <div id="shape"></div>
+
+    <div id="leaf"></div>    
+    <div id="text1">The next day was Sunday again. The caterpillar ate through one nice green leaf, 
+    </div>    
+    <div id="text">
+        <div id="text2"> and after that he felt much better.</div>
+    </div>
+    <div id="hole1"></div>
+    <div id="hole2"></div>
+    <div id="hole3"></div>
+    <div id="hole4"></div>
+    <div id="hole5"></div>
+    <div id="movingbox1"></div>
+    <button id="next" onclick="location.href='index8.html'"></button> 
+    <button id="back" onclick="location.href='index6.html'"></button> 
 </body>
 </html>

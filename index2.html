@@ -4,52 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <style>
         @keyframes shake{
-            5% { transform: translate(-50%, -50%) rotate(10deg); }
-            10% { transform: translate(-50%, -50%) rotate(-10deg); }
-            15% { transform: translate(-50%, -50%) rotate(10deg); }
-            20% { transform: translate(-50%, -50%) rotate(-10deg); }
-            25% { transform: translate(-50%, -50%) rotate(10deg); }
-            30% { transform: translate(-50%, -50%) rotate(-10deg); }
-            45% { transform: translate(-50%, -50%) rotate(10deg); }
-            50% { transform: translate(-50%, -50%) rotate(-10deg); }
-        
-
-            /* Stop shaking, return to original rotation, then fade out */
+            5% {transform: rotate(20deg); }
+            10% {transform: rotate(-20deg); }
+            15% {transform: rotate(-20deg); }
+            25% {transform: rotate(20deg); }
+            30% {transform: rotate(-20deg); }
+            45% {transform: rotate(20deg); }
+            50% {transform: rotate(-20deg); }
             60% {
-                transform: translate(-50%, -50%) rotate(0deg); /* Stop shaking at original rotation */
-                opacity: 1; /* Ensure it's fully visible before fading */
+                transform: rotate(0deg); 
+                opacity: 1; 
             }
             100% {
-                transform: translate(-50%, -50%) rotate(0deg); /* MAINTAIN original position and rotation */
-                opacity: 0; /* Only fade out */
-            }
-        }
-        @keyframes fade-in{
-            80%{
-                opacity:0;
-            }
-            100%{
-                opacity: 100;
+                transform: rotate(0deg); 
+                opacity: 0; 
             }
         }
         body{
             margin: 0;
             padding: 0;
-            background-image: url("leaf.jpg");
+            background-image: url("leaf.png");
+            background-size:cover;
+            overflow: hidden;
         }
         #egg{
             position: absolute;
             top: 50vh;
-            left: 50vw;
-            transform:translate(-50%,-50%);
+            left: 20vw;
             background-image: url("egg.png");
             /* removes the weird button border and background */
             background-color: transparent;
+            background-repeat: no-repeat;
             border: none;
             width: 15vw;
-            height: 30vh;
+            height: 35vh;
             z-index: 5;
             /* changes from cursor to pointer when hovering over the egg*/
             cursor: pointer;
@@ -62,58 +53,28 @@
             animation-fill-mode: forwards;
             animation-timing-function: (0,2,1,.4);
         }
-        #next{
-        animation-name: fade-in;
-        opacity: 0;
-        animation-duration: 5s;
-        animation-fill-mode: forwards;
-        position: absolute;
-        width: 300px;
-        height: 300px;
-        top: 80vh;
-        left: 78vw;
-        background-image: url("next.png");
-        background-color: transparent;
-        border: none;
-        background-size: contain;
-        background-repeat: no-repeat;
-        cursor:pointer;
-        }
+
         #caterpillar{
             position: absolute;
             background-image: url("caterpillar2.png");
             background-size: cover;
             width: 300px;
             height: 200px;
-            top: 50vh;
-            left :50vw;
-            transform: translate(-50%,-50%)scale(0.47);
+            top: 53vh;
+            left :16.5vw;
+            transform:scale(0.6);
             z-index: 2;
         }
-        #caterpillar-back{
-            position: absolute;
-            background-image: url("explosion.png");
-            background-size: cover;
-            width: 700px;
-            height: 500px;
-            top: 50vh;
-            left :50vw;
-            transform: translate(-50%,-50%)scale(0.2);
-            z-index: 1;
-        }
-
-        
-        #text{
+        #text-arrow{
             position:absolute;
             clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 100% 100%, 50% 75%, 0% 75%);
-            border-color: black;
-            background-color: white;
+            background-color: gray;
+            font-size:20px;
             width: 10vw;
             height: 15vh;
-            top: 35vh;
-            left: 35vw;
-
-
+            top: 50vh;
+            left: 10vw;
+            text-align: center;
         }
     </style>
 
@@ -121,8 +82,8 @@
 <body>
     <button id="egg"></button>
     <div id="caterpillar"></div>
-    <div id="caterpillar-back"></div>
-    <div id="text">HOLD DOWN TO HATCH</div>
+    <div id="text-arrow">HOLD DOWN TO HATCH</div>
     <button id="next" onclick="location.href='index3.html'"></button> 
+    <button id="back" onclick="location.href='index.html'"></button> 
 </body>
 </html>

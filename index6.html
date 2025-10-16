@@ -4,81 +4,212 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <style>
-        @keyframes disappear{
-            100%{
-                opacity:0;
-            }
+    @keyframes slide{
+        100%{
+            transform:translate(0,100vh)
         }
-        @keyframes biggify{
-            90%{
-                opacity:1;
-            }
-            100%{
-                scale:1.5;
-                opacity:0;
+    }
+    #food{
+        position:absolute;
+        background-image:url("food.png");
+        background-repeat:no-repeat;
+        background-size:contain;
+        width:50vw;
+        height:50vh;
+        top:24vh;
+        left:38vw;
+        scale:2;
+    }
+    #text{
+        font-size: 20px;
+        line-height:40px;
+    }
+    #text1{
+        position:absolute;
+        left:0.5vw;
+        top:20vh;
+        width:180px;
+        text-align: left;
+    }
+    #text2{
+        position:absolute;
+        left:82vw;
+        top:20vh;
+        width:180px;
+    }
+    #text3{
+        position:absolute;
+        left:82vw;
+        top:70vh;
+        width:180px
+    }
+    #hole1{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:15vw;
+        top:19vh;
+        z-index:2;
+        background-color:white;
+    }    
+    #hole2{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:28vw;
+        top:19vh;
+        z-index:2;
+        background-color:white;
+    }
+    #hole3{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:43vw;
+        top:19vh;
+        z-index:2;
+        background-color:white;
+    }
+    #hole4{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:59vw;
+        top:19vh;
+        z-index:2;
+        background-color:white;
+    }
+    #hole5{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:74vw;
+        top:18vh;
+        z-index:2;
+        background-color:white;
+    }
 
-            }
-        }
-        @keyframes reappear{
-            100%{
-                opacity:1
-            }
-        }
-        
-        #caterpillar{
-            position: absolute;
-            background-image:url("caterpillar2.png");
-            width: 600px;
-            height: 400px;
-            scale:0.5;
-            top: 20vh;
-            left: 30vw;
+    #hole6{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:15vw;
+        top:66vh;
+        z-index:2;
+        background-color:white;
+    }    
+    #hole7{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:28vw;
+        top:66vh;
+        z-index:2;
+        background-color:white;
+    }
+    #hole8{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:44vw;
+        top:66vh;
+        z-index:2;
+        background-color:white;
+    }
+    #hole9{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:59vw;
+        top:66vh;
+        z-index:2;
+        background-color:white;
+    }
+    #hole10{
+        position:absolute;
+        clip-path:circle(50% at 50% 50%);
+        height:75px;
+        width:75px;
+        left:73vw;
+        top:68vh;
+        z-index:2;
+        background-color:white;
+    }    
+    #movingbox1{
+        position:absolute;
+        z-index:5;
+        width:190px;
+        height:100vh;
+        background-color:white;
+        animation-name:slide;
+        animation-duration:8s;
+        animation-fill-mode: forwards;
+    }
+    #movingbox2{
+        position:absolute;
+        z-index:5;
+        width:180px;
+        height:100vh;
+        left:82vw;
+        background-color:white;
+        animation-name:slide;
+        animation-duration:8s;
+        animation-delay:3s;
+        animation-fill-mode: forwards;
+    }
+    #movingbox3{
+        position:absolute;
+        z-index:5;
+        width:75vw;
+        height:100vh;
+        left:190px;
+        background-color:white;
+        animation-name:slide;
+        animation-duration:13s;
+        animation-fill-mode: forwards;
 
-            animation-name: disappear;
-            animation-duration:1s;
-            animation-delay:1s;
-            animation-fill-mode: forwards;
-        }
-        #caterpillar2{
-            position: absolute;
-            background-image:url("caterpillar.png");
-            width: 550px;
-            height: 250px;
-            scale: 0.6;
-            top: 30vh;
-            left: 30vw;
-
-            opacity:0;
-            animation-name: biggify;
-            animation-duration:3s;
-            animation-delay:2s;
-            animation-fill-mode: forwards;
-
-        }
-
-        #fat{
-            position: absolute;
-            background-image:url("fat-caterpillar.png");
-            width: 30vw;
-            height:60vh;
-            scale: 2;
-            background-repeat: no-repeat;
-            top:55vh;
-            left: 45vw;
-
-            opacity:0;
-            animation-name:reappear;
-            animation-duration:1s;
-            animation-delay:5s;
-            animation-fill-mode: forwards;
-            
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
-    <div id="caterpillar"></div>
-    <div id="caterpillar2"></div>
-    <div id="fat"></div>
+    <div id="food"></div>
+    <div id="text">
+    <div id="text1">On Saturday
+        he ate through
+        one piece of
+        chocolate cake, one ice-cream cone, one pickle, one slice of Swiss cheese, one slice of salami,</div>
+    </div>
+    <div id="text">
+        <div id="text2">one lollipop, one piece of cherry pie, one sausage, one cupcake, and one slice of watermelon.</div>
+    </div>
+    <div id="text">
+        <div id="text3">That night he had a stomachache!</div>
+    </div>
+    <div id="hole1"></div>
+    <div id="hole2"></div>
+    <div id="hole3"></div>
+    <div id="hole4"></div>
+    <div id="hole5"></div>
+    <div id="hole6"></div>
+    <div id="hole7"></div>
+    <div id="hole8"></div>
+    <div id="hole9"></div>
+    <div id="hole10"></div>
+    <div id="movingbox1"></div>
+    <div id="movingbox2"></div>
+    <div id="movingbox3"></div>
+    <button id="next" onclick="location.href='index7.html'"></button> 
+    <button id="back" onclick="location.href='index5.html'"></button> 
 </body>
 </html>

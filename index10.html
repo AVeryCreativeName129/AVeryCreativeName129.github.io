@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+@keyframes unravel{
+    100%{
+        transform:rotateY(-1080deg) scale(0.1);
+        opacity:0;
+        }
+}
+@keyframes appear{
+    100%{
+        opacity:1;
+        transform:scale(1.3);
+    }
+}
+@keyframes textappear{
+    66.6%{
+        opacity:1;
+        transform:scale(1.3);
+    }
+    100%{
+        opacity:0
+    }
+}
+@keyframes updown{
+    0%{
+        transform: translate(0vw,0vh) scale(1.3);
+        opacity:1;
+    }
+    50%{
+        transform: translate(0vw,-20vh) scale(1.3);
+        opacity:1
+    }
+    100%{
+        transform: translate(0vw,20vh) scale(1.3);
+        opacity:1;
+    }
+}
+    #cacoon{
+        position: absolute;
+        background-image: url("cacoon.png");
+        background-repeat: no-repeat;
+        width:600px;
+        height:300px;
+        top:20vh;
+        left: 50vh;
+        animation-name: unravel;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
+    #butterfly{
+        position: absolute;
+        background-image: url("butterfly.png");
+        width:600px;
+        height:450px;
+        top:20vh;
+        left: 55vh;
+        opacity:0;
+        animation-name: appear, updown;
+        animation-duration: 4s, 4s;
+        animation-iteration-count: 1, infinite;
+        animation-timing-function: linear, linear;
+        animation-delay: 2s, 8s;
+        animation-fill-mode: forwards,forwards;
+        animation-direction:normal,alternate-reverse; 
+    }
+    #text{
+        position:absolute;
+        font-size: 32px;
+        width: 80vw;
+        height:50px;
+        left:40vw;
+        top:10vh;
+        opacity:0;
+        animation-name: appear;
+        animation-delay:2s;
+        animation-duration:5s
+        }
+
+    #the{
+        position: absolute;
+        width:200px;
+        height:200px;
+        top:40vh;
+        left: 5vw;
+        font-size: 100px;
+        opacity:0;
+        animation-name:updown;
+        animation-duration:4s;
+        animation-delay: 8s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+    #end{
+        position: absolute;
+        width:200px;
+        height:200px;
+        top:40vh;
+        font-size: 100px;
+        opacity:0;
+        left: 80vw;
+        animation-name:updown;
+        animation-duration:4s;
+        animation-delay: 8s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+    }
+
+</style>
+</head>
+<body>
+    <div id="cacoon"></div>
+    <div id="butterfly"></div>
+    <div id="text">he was a beautiful butterfly!</div>
+    <div id="the">THE</div>
+    <div id="end">END</div>
+    <button id="back" onclick="location.href='index9.html'"></button> 
+</body>
+</html>
